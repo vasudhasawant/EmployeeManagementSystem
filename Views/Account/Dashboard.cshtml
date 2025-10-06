@@ -1,0 +1,21 @@
+﻿@model TaskManagement.Models.Employee
+
+<h2>Employee Details</h2>
+
+<table border="1" cellpadding="8" cellspacing="2">
+    <tr>
+        <th>Employee Name</th>
+        <td>@Model.Employeename</td>
+    </tr>
+    <tr>
+        <th>Department</th>
+        <td>@Model.Department</td>
+    </tr>
+    <tr>
+        <th>Designation</th>
+        <td>@Model.Designation</td>
+    </tr>
+</table>
+
+
+<a asp-controller="Account" asp-action="Login" class="btn btn-primary">Back</a>

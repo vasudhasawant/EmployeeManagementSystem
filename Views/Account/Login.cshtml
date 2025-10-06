@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form method="post" asp-controller="Account" asp-action="Login">
+    <table border="1" cellpadding="10" cellspacing="2">
+        <tr>
+            <td><label>User Name</label></td>
+            <td><input type="text" name="UserName" required /></td>
+        </tr>
+        <tr>
+            <td><label>Password</label></td>
+            <td><input type="password" name="Password" required /></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <button type="submit">Login</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+@if (ViewBag.Error != null)
+{
+    <script>
+        alert("@ViewBag.Error");
+    </script>
+}
