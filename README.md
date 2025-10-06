@@ -24,15 +24,17 @@ It allows administrators to manage employees, departments, and designations effi
 
 ## ⚙️ Database Setup
 ```sql
-CREATE DATABASE EmployeeDB;
+create database TaskManagement
 
-USE EmployeeDB;
-
-CREATE TABLE Employees (
-    ID INT IDENTITY PRIMARY KEY,
-    EmployeeName VARCHAR(50) NOT NULL,
-    UserName VARCHAR(50) NOT NULL,
-    Password VARCHAR(50) NOT NULL,
-    Department VARCHAR(50),
-    Designation VARCHAR(50)
-);
+use TaskManagement
+create table Employee
+(
+id int identity primary key,
+employeename varchar(100) not null,
+username varchar(20) not null unique,
+password varchar(20) not null,
+department varchar(20),
+designation varchar(20)
+)
+insert into employee values('vasudha','vasu','admin@12345','IT','Software Developer')
+select * from Employee
